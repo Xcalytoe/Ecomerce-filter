@@ -1,0 +1,4 @@
+
+export const FILTER_LOADING = "FILTER_LOADING"; 
+export const FILTER_SUCCESS = "FILTER_SUCCESS"; 
+export const FILTER_ERROR = "FILTER_ERROR"; 

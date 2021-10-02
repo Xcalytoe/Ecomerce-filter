@@ -1,0 +1,93 @@
+@mixin border-radius($radius...){
+    -moz-border-radius:$radius;
+    -webkit-border-radius:$radius;
+    -o-border-radius:$radius;
+    -ms-border-radius:$radius;
+    border-radius:$radius;
+}
+@mixin transition($transition-time ...){
+    -moz-transition:  $transition-time;
+    -webkit-transition: $transition-time;
+    -ms-transition:  $transition-time;
+    -o-transition: $transition-time;
+    transition: $transition-time; 
+}
+@mixin  border-top($border-top...) {
+    -webkit-border-top:$border-top;
+    -moz-border-top:$border-top;
+    -o-border-top:$border-top;
+    -ms-border-top:$border-top;
+    border-top:$border-top;
+}
+@mixin  border-left($border-top...) {
+    -webkit-border-left:$border-top;
+    -moz-border-left:$border-top;
+    -o-border-left:$border-top;
+    -ms-border-left:$border-top;
+    border-left:$border-top;
+}
+@mixin  border($border...) {
+    -webkit-border:$border;
+    -moz-border:$border;
+    -o-border:$border;
+    -ms-border:$border;
+    border:$border;
+}
+@mixin  border-color($border-color...) {
+    -webkit-border-color:$border-color;
+    -moz-border-color:$border-color;
+    -o-border-color:$border-color;
+    -ms-border-color:$border-color;
+    border-color:$border-color;
+}
+@mixin  border-bottom($border-bottom...) {
+    -webkit-border-bottom:$border-bottom;
+    -moz-border-top:$border-bottom;
+    -o-border-bottom:$border-bottom;
+    -ms-border-bottom:$border-bottom;
+    border-bottom:$border-bottom;
+}
+@mixin  border-right($border-bottom...) {
+    -webkit-border-right:$border-bottom;
+    -moz-border-right:$border-bottom;
+    -o-border-right:$border-bottom;
+    -ms-border-right:$border-bottom;
+    border-right:$border-bottom;
+}
+@mixin box-shadow($box-shadow-details...){
+    -webkit-box-shadow:$box-shadow-details;
+    -o-box-shadow:$box-shadow-details;
+    -ms-box-shadow:$box-shadow-details;
+    -moz-box-shadow:$box-shadow-details;
+    box-shadow:$box-shadow-details;
+
+}
+@mixin text-shadow($text-shadow-details...){
+    -webkit-text-shadow:$text-shadow-details;
+    -o-text-shadow:$text-shadow-details;
+    -ms-text-shadow:$text-shadow-details;
+    -moz-text-shadow:$text-shadow-details;
+    text-shadow:$text-shadow-details;
+
+}
+@mixin  outline($outline...) {
+    -webkit-outline:$outline;
+    -moz-outline:$outline;
+    -o-outline:$outline;
+    -ms-outline:$outline;
+    outline:$outline;
+}
+@mixin  transform($outline...) {
+    -webkit-transform:$outline;
+    -moz-transform:$outline;
+    -o-transform:$outline;
+    -ms-transform:$outline;
+    transform:$outline;
+}
+@mixin filter($grayscale...) {
+    -webkit-filter:$grayscale;
+    -ms-filter:$grayscale;
+    -moz-filter:$grayscale;
+    -o-filter:$grayscale;
+    filter:$grayscale;
+}
