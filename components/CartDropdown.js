@@ -11,7 +11,7 @@ export default function CartDropdown() {
     let cartItem = cart.map((item, index) => {
         return  <div key={`cartItem${index}`}>
                     <Link href="/">
-                        <a className="flex cart-dropdown__flex items-center">
+                        <a className="flex cart-dropdown__flex items-center justify-between">
                             <div>
                                 <p className="cart-dropdown__name">{item.name}</p>
                                 <p className="cart-dropdown__price">${item.price}</p>
@@ -34,7 +34,7 @@ export default function CartDropdown() {
     }
     // close cart function 
     const handleCloseCart = () => {
-        return cartDispatch({// clear cart items
+        return cartDispatch({
             type:CART_INACTIVE,
             cartLoad: false,
         })
