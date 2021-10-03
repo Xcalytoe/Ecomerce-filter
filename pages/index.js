@@ -4,6 +4,7 @@ import Details from '../components/Details'
 import Products from '../components/Products'
 import Navbar from '../components/Navbar'
 import styles from '../styles/Home.module.css'
+import CartDropdown from '../components/CartDropdown'
 
 export default function Home() {
   return (
@@ -17,8 +18,8 @@ export default function Home() {
       <main className="">
         <header>
           <Navbar/>
-
         </header>
+        <CartDropdown/>
         <Details/>
         <Products/>
       </main>

@@ -1,4 +1,4 @@
-import { CART_LOADING, CART_SUCCESS, CART_ERROR, CART_CLEAR } from "../actionsType/actiontypes";
+import { CART_LOADING, CART_SUCCESS, CART_INACTIVE, CART_ACTIVE, CART_ERROR, CART_CLEAR } from "../actionsType/actiontypes";
 export const initialCart ={
     cartLoad: false,
     cart: [],
@@ -7,16 +7,10 @@ export const initialCart ={
 export const cart =(state = initialCart, action)=>{
      const {type, payload} = action;
     switch(type){
-        case CART_LOADING:
-            return{
-                ...state,
-                cartLoad:true,
-                cartError: null,
-            }
         case CART_SUCCESS:
         return {
             ...state,
-            cartLoad:false,
+            cartLoad:true,
             cartError: null,
             cart: payload,
         }
@@ -31,6 +25,16 @@ export const cart =(state = initialCart, action)=>{
                 cartLoad: false,
                 cart: [],
                 cartError:null,
+            }
+        case CART_ACTIVE:
+            return {
+                ...state,
+                cartLoad: true,
+            }
+        case CART_INACTIVE:
+            return {
+                ...state,
+                cartLoad: false,
             }
         default:
             return state

@@ -5,7 +5,6 @@ import {GlobalContext} from './context/Provider';
 import SidebarFilter from './SidebarFilter';
 import Skeleton from './Skeleton';
 import Sort from './Sort';
-import { cart } from './context/reducers/cartReducer';
 import { CART_SUCCESS } from './context/actionsType/actiontypes';
 import Pagination from './Pagination';
 
@@ -19,7 +18,6 @@ export default function Filter() {
         let products = [...cart, product];
         cartDispatch({// push product to global state
             type:CART_SUCCESS,
-            loading: false,
             payload: products
         })
     }
