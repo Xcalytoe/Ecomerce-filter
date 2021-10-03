@@ -7,7 +7,7 @@ export default function Navbar() {
     const {cartLoading , cart} = cartState;
     console.log()
     return (
-        <nav className="flex justify-between items-center">
+        <nav className="flex justify-between items-center navbar-container">
             <Link href="/">
                 <a>
                     <svg width="159" height="26" viewBox="0 0 159 26" fill="none" xmlns="http://www.w3.org/2000/svg">

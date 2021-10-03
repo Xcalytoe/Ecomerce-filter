@@ -1,31 +1,5 @@
 export const data = {
     "products":[
-       {
-          "name":"Red Bench",
-          "category":"people",
-          "price":3.89,
-          "currency":"USD",
-          "image":{
-             "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-             "alt":"People"
-          },
-          "bestseller":true,
-          "featured":false,
-          "details":null
-       },
-       {
-        "name":"Red Bench",
-        "category":"people",
-        "price":3.89,
-        "currency":"USD",
-        "image":{
-           "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-           "alt":"People"
-        },
-        "bestseller":true,
-        "featured":false,
-        "details":null
-     },
      {
         "name":"Red Bench",
         "category":"people",
@@ -99,6 +73,298 @@ export const data = {
         "featured":false,
         "details":null
      },
+
+
+     {
+        "name":"Red Bench",
+        "category":"people",
+        "price":3.89,
+        "currency":"USD",
+        "image":{
+           "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+           "alt":"People"
+        },
+        "bestseller":false,
+        "featured":false,
+        "details":null
+     },
+     {
+      "name":"Red Bench",
+      "category":"people",
+      "price":3.89,
+      "currency":"USD",
+      "image":{
+         "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+         "alt":"People"
+      },
+      "bestseller":true,
+      "featured":false,
+      "details":null
+   },   {
+    "name":"Red Bench",
+    "category":"people",
+    "price":3.89,
+    "currency":"USD",
+    "image":{
+       "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+       "alt":"People"
+    },
+    "bestseller":false,
+    "featured":false,
+    "details":null
+ },
+ {
+  "name":"Red Bench",
+  "category":"people",
+  "price":3.89,
+  "currency":"USD",
+  "image":{
+     "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+     "alt":"People"
+  },
+  "bestseller":false,
+  "featured":false,
+  "details":null
+},   {
+    "name":"Red Bench",
+    "category":"people",
+    "price":3.89,
+    "currency":"USD",
+    "image":{
+       "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+       "alt":"People"
+    },
+    "bestseller":false,
+    "featured":false,
+    "details":null
+ },
+ {
+  "name":"Red Bench",
+  "category":"people",
+  "price":3.89,
+  "currency":"USD",
+  "image":{
+     "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+     "alt":"People"
+  },
+  "bestseller":false,
+  "featured":false,
+  "details":null
+},   {
+    "name":"Red Bench",
+    "category":"people",
+    "price":3.89,
+    "currency":"USD",
+    "image":{
+       "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+       "alt":"People"
+    },
+    "bestseller":false,
+    "featured":false,
+    "details":null
+ },
+ {
+  "name":"Red Bench",
+  "category":"people",
+  "price":3.89,
+  "currency":"USD",
+  "image":{
+     "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+     "alt":"People"
+  },
+  "bestseller":false,
+  "featured":false,
+  "details":null
+},   {
+    "name":"Red Bench",
+    "category":"people",
+    "price":3.89,
+    "currency":"USD",
+    "image":{
+       "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+       "alt":"People"
+    },
+    "bestseller":false,
+    "featured":false,
+    "details":null
+ },
+ {
+  "name":"Red Bench",
+  "category":"people",
+  "price":3.89,
+  "currency":"USD",
+  "image":{
+     "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+     "alt":"People"
+  },
+  "bestseller":false,
+  "featured":false,
+  "details":null
+},   {
+    "name":"Red Bench",
+    "category":"people",
+    "price":14.65,
+    "currency":"USD",
+    "image":{
+       "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+       "alt":"People"
+    },
+    "bestseller":false,
+    "featured":false,
+    "details":null
+ },
+ {
+  "name":"Red Bench",
+  "category":"people",
+  "price":60.89,
+  "currency":"USD",
+  "image":{
+     "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+     "alt":"People"
+  },
+  "bestseller":false,
+  "featured":false,
+  "details":null
+},   {
+    "name":"Red Bench",
+    "category":"people",
+    "price":50.89,
+    "currency":"USD",
+    "image":{
+       "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+       "alt":"People"
+    },
+    "bestseller":false,
+    "featured":false,
+    "details":null
+ },
+ {
+  "name":"Red Bench",
+  "category":"people",
+  "price":8.89,
+  "currency":"USD",
+  "image":{
+     "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+     "alt":"People"
+  },
+  "bestseller":false,
+  "featured":false,
+  "details":null
+},   {
+    "name":"Red Bench",
+    "category":"people",
+    "price":333.89,
+    "currency":"USD",
+    "image":{
+       "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+       "alt":"People"
+    },
+    "bestseller":false,
+    "featured":false,
+    "details":null
+ },
+ {
+  "name":"Red Bench",
+  "category":"people",
+  "price":322.89,
+  "currency":"USD",
+  "image":{
+     "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+     "alt":"People"
+  },
+  "bestseller":false,
+  "featured":false,
+  "details":null
+},   {
+    "name":"Red Bench",
+    "category":"people",
+    "price":99.89,
+    "currency":"USD",
+    "image":{
+       "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+       "alt":"People"
+    },
+    "bestseller":false,
+    "featured":false,
+    "details":null
+ },
+ {
+  "name":"Red Bench",
+  "category":"people",
+  "price":199.89,
+  "currency":"USD",
+  "image":{
+     "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+     "alt":"People"
+  },
+  "bestseller":false,
+  "featured":false,
+  "details":null
+},   {
+    "name":"Red Bench",
+    "category":"people",
+    "price":43.89,
+    "currency":"USD",
+    "image":{
+       "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+       "alt":"People"
+    },
+    "bestseller":false,
+    "featured":false,
+    "details":null
+ },
+ {
+  "name":"Red Bench",
+  "category":"people",
+  "price":38.89,
+  "currency":"USD",
+  "image":{
+     "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+     "alt":"People"
+  },
+  "bestseller":false,
+  "featured":false,
+  "details":null
+},   {
+    "name":"Red Bench",
+    "category":"people",
+    "price":300,
+    "currency":"USD",
+    "image":{
+       "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+       "alt":"People"
+    },
+    "bestseller":false,
+    "featured":false,
+    "details":null
+ },
+ {
+  "name":"Red Bench",
+  "category":"people",
+  "price":200,
+  "currency":"USD",
+  "image":{
+     "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+     "alt":"People"
+  },
+  "bestseller":true,
+  "featured":false,
+  "details":null
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
        {
           "name":"Samurai King Restling",
           "category":"landmarks",

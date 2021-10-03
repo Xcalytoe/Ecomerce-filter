@@ -7,21 +7,17 @@ import {GlobalContext} from '../components/context/Provider';
 
 export default function Pagination() {
     const {productState,  productDispatch} = useContext(GlobalContext);
+    const { products, prevProducts } = productState;
 
     const [ pageNumber, setPageNumber ] = useState(0);
     const productPerPage = 6;
     const pagesVisited = pageNumber * productPerPage;
-    const pageCount = Math.ceil(data.products.length / productPerPage);
+    const pageCount = Math.ceil(prevProducts.length / productPerPage);
     const displayProducts = (num1, num2) =>{
-        let myProduct = data.products.slice(num1, num2);
+        let myProduct = prevProducts.slice(num1, num2);
         return (
             productDispatch({
             type:FILTER_SUCCESS,
-            loading: false,
-            payload: myProduct,
-        }),  
-        productDispatch({
-            type:FILTER_SUCCESS_PREV,
             loading: false,
             payload: myProduct,
         })
@@ -29,8 +25,11 @@ export default function Pagination() {
     }
     useEffect(() => {
         displayProducts(pagesVisited, pagesVisited + productPerPage)
-    }, [pageNumber]);
-
+    }, [pageNumber, prevProducts]);
+    
+    useEffect(() => { //reset page no to zero after filter
+        setPageNumber(0);
+    }, [prevProducts])
     const handleChangePage = ({selected}) => {
         setPageNumber(selected);
     }

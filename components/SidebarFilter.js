@@ -3,14 +3,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {data} from '../util/data'
 import {GlobalContext} from '../components/context/Provider';
-import { FILTER_LOADING, FILTER_SUCCESS } from '../components/context/actionsType/actiontypes';
+import { FILTER_LOADING, FILTER_SUCCESS, FILTER_SUCCESS_PREV } from '../components/context/actionsType/actiontypes';
 
 
 export default function SidebarFilter() {
     const [filters, setFilters] = useState([])
     const {productState,  productDispatch} = useContext(GlobalContext);
     const { products, prevProducts } = productState;
-    console.log(prevProducts)
         // handle onChange 
     const onChange = (e) =>{
         if (e.target.checked) {
@@ -22,9 +21,9 @@ export default function SidebarFilter() {
     useEffect(() => {
         if (filters.length === 0){
             productDispatch({
-                type:FILTER_SUCCESS,
+                type:FILTER_SUCCESS_PREV,
                 loading: false,
-                payload: prevProducts
+                payload: data.products
             })
         }else{
             // set loader to true 
@@ -33,7 +32,7 @@ export default function SidebarFilter() {
                 loading: true,
               })
             // filter from prevProducts 
-            let myProduct = prevProducts.filter((item) => {
+            let myProduct = data.products.filter((item) => {
                     
                 return  filters.some(name => {
                     if (name === "lower") {
@@ -59,7 +58,7 @@ export default function SidebarFilter() {
             })
             // send products to global state 
             setTimeout(() =>  productDispatch({
-                type:FILTER_SUCCESS,
+                type:FILTER_SUCCESS_PREV,
                 loading: false,
                 payload: myProduct
                 }), 2000)

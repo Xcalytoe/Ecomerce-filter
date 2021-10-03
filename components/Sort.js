@@ -30,7 +30,6 @@ export default function Sort() {
         sortProducts(sortOption, newOrder);//  sort function
       }
     }, [sortOption, sortOrder]);
-    console.log("eredswe",sortOption)
     return (
         <div className="flex items-center filter__select">
             <div>

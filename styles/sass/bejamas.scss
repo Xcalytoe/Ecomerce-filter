@@ -543,15 +543,16 @@ html {
     margin-bottom: 61px;
     column-gap: 15px;
     &__disabled{
-        a{
-            cursor: not-allowed;
-            cursor: unset;
-        }
-        svg{
-            path{
-                stroke:#B4B4B4;
-            }
-        }
+        display: none;
+        // a{
+        //     cursor: not-allowed;
+        //     cursor: unset;
+        // }
+        // svg{
+        //     path{
+        //         stroke:#B4B4B4;
+        //     }
+        // }
     }
     &__li{
         font-style: normal;
@@ -563,4 +564,7 @@ html {
     &__active{
         color: #000000; 
     }
+}
+.navbar-container{
+    position: relative;
 }
