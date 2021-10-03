@@ -4,19 +4,40 @@ import Image from 'next/image'
 import {GlobalContext} from './context/Provider';
 import SidebarFilter from './SidebarFilter';
 import Skeleton from './Skeleton';
+import Sort from './Sort';
+import { cart } from './context/reducers/cartReducer';
+import { CART_SUCCESS } from './context/actionsType/actiontypes';
+import Pagination from './Pagination';
 
 
 export default function Filter() {
-    const {productState,  productDispatch} = useContext(GlobalContext);
+    const {productState, cartState,  cartDispatch} = useContext(GlobalContext);
     const {loading , products} = productState;
-    const allProducts = products.slice(0,6).map((val, index) => {
-       console.log(val)
+    const { cart } = cartState;
+
+    const handleAddToCart = (product) => {
+        let products = [...cart, product];
+        cartDispatch({// push product to global state
+            type:CART_SUCCESS,
+            loading: false,
+            payload: products
+        })
+    }
+
+    const allProducts = products?.slice(0,6).map((val, index) => {
+    //    console.log(val)
        return ((!val.featured) ? 
-       <Link href="/" key={`item${index}`}>
-            <a>
-                <Image className="object-fit" src={val.image.src} width={282} height={398} placeholder="blur" blurDataURL={val.image.src} alt={val.image.alt}/>
-            </a>
-        </Link> :
+       <div className="products-grid__item" key={`item${index}`}>
+           <div className="products-grid__image">
+                    {/* best seller tag */}
+                {val.bestseller ? <span> Best Seller</span> : null}
+                <Image  src={val.image.src} width={282} height={398} placeholder="blur" blurDataURL={val.image.src} alt={val.image.alt}/>
+                <button onClick={()=> handleAddToCart(val)} className="products-grid__button">Add to Cart</button>
+           </div>
+           <p className="products-grid__category">{val.category}</p>
+           <p className="products-grid__name">{val.name}</p>
+           <p className="products-grid__amount">${val.price} </p>
+        </div> :
         null
        )
     });
@@ -32,26 +53,15 @@ export default function Filter() {
                     <span className="split px-3">/</span>
                     <span>Premium Photos</span>
                 </div>
-                <div className="flex items-center filter__select">
-                    <span>
-                        <svg className="inline-block" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.64807 14.3734V1.5347L5.90435 3.79098C5.97793 3.86456 6.07296 3.90134 6.17106 3.90134C6.26916 3.90134 6.36419 3.86456 6.43777 3.79098C6.58492 3.64383 6.58492 3.40778 6.43777 3.26063L3.54077 0.363637C3.39976 0.222619 3.15144 0.222619 3.01042 0.363637L0.110362 3.26063C-0.0367873 3.40778 -0.0367873 3.64383 0.110362 3.79098C0.257511 3.93813 0.493562 3.93813 0.640711 3.79098L2.897 1.5347V14.3734C2.897 14.5819 3.0656 14.7505 3.27407 14.7505C3.47946 14.7474 3.64807 14.5788 3.64807 14.3734Z" fill="black"/>
-                            <path d="M11.4592 14.6367C11.5328 14.7103 11.6278 14.7471 11.7259 14.7471C11.824 14.7471 11.919 14.7103 11.9926 14.6367L14.8896 11.7397C15.0368 11.5926 15.0368 11.3565 14.8896 11.2094C14.7425 11.0622 14.5064 11.0622 14.3593 11.2094L12.103 13.4657V0.626917C12.103 0.418456 11.9344 0.249847 11.7259 0.249847C11.5174 0.249847 11.3488 0.418456 11.3488 0.626917V13.4657L9.09561 11.2094C8.94846 11.0622 8.71241 11.0622 8.56526 11.2094C8.41811 11.3565 8.41811 11.5926 8.56526 11.7397L11.4592 14.6367Z" fill="black"/>
-                        </svg>
-
-                        Sort By
-                    </span>
-                    <select>
-                        <option>Price</option>
-                    </select>
-                </div>
+                {/* sorting component  */}
+                <Sort/>
 
            </div>
            <div className="filter__grid grid">
                <SidebarFilter/>
                <main>
-                    {loading ? <Skeleton/> : allProducts}
-                    
+                    {loading ? <Skeleton/> : <div className="products-grid grid">{allProducts}</div>}
+                    <Pagination/>
                </main>
            </div>
         </div>

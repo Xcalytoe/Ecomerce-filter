@@ -1,18 +1,32 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect, useContext } from 'react'
 import Image from 'next/image'
 import featuredImg from '../public/images/img.jpg'
 import Link from 'next/link'
 import {data} from '../util/data'
+import {GlobalContext} from './context/Provider';
+import { CART_SUCCESS } from './context/actionsType/actiontypes';
 
 
 export default function Details() {
+    const { cartState,  cartDispatch} = useContext(GlobalContext);
+    const { cart } = cartState;
     const [featured, setFeatured] = useState({});
+
     useEffect(() => {
         let product = data.products.filter( item => {
             return item.featured
         })
         setFeatured(product[0])
     }, );
+
+    const handleAddToCart = (product) => {
+        let products = [...cart, product];
+        cartDispatch({// push product to global state
+            type:CART_SUCCESS,
+            loading: false,
+            payload: products
+        })
+    }
 
     if (Object.keys(featured).length == 0){
         return(<div className="py-4">Loading...</div>)
@@ -21,7 +35,7 @@ export default function Details() {
         <section className="details">
             <div className="details__header flex justify-between items-center flex-wrap">
                 <h4>{featured.name}</h4>
-                <input type="button" value="ADD TO CART"/>
+                <input type="button" value="ADD TO CART" onClick={ ()=> handleAddToCart(featured)}/>
             </div>
             <div>
                 <div className="details__image">

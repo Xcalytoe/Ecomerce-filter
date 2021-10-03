@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import Link from 'next/link'
+import {GlobalContext} from './context/Provider';
+
 export default function Navbar() {
+    const {cartState,  cartDispatch} = useContext(GlobalContext);
+    const {cartLoading , cart} = cartState;
+    console.log()
     return (
         <nav className="flex justify-between items-center">
             <Link href="/">
@@ -23,7 +28,7 @@ export default function Navbar() {
                     <path d="M15.8203 45.9844C15.8203 48.6013 17.9495 50.7305 20.5664 50.7305C23.1834 50.7305 25.3125 48.6013 25.3125 45.9844C25.3125 43.3674 23.1834 41.2383 20.5664 41.2383C17.9495 41.2383 15.8203 43.3674 15.8203 45.9844ZM20.5664 44.4023C21.4386 44.4023 22.1485 45.1122 22.1485 45.9844C22.1485 46.8566 21.4386 47.5664 20.5664 47.5664C19.6943 47.5664 18.9844 46.8566 18.9844 45.9844C18.9844 45.1122 19.6943 44.4023 20.5664 44.4023Z" fill="black"/>
                     <path d="M38.1797 45.9844C38.1797 48.6013 40.3089 50.7305 42.9258 50.7305C45.5428 50.7305 47.6719 48.6013 47.6719 45.9844C47.6719 43.3674 45.5428 41.2383 42.9258 41.2383C40.3089 41.2383 38.1797 43.3674 38.1797 45.9844ZM42.9258 44.4023C43.798 44.4023 44.5079 45.1122 44.5079 45.9844C44.5079 46.8566 43.798 47.5664 42.9258 47.5664C42.0537 47.5664 41.3438 46.8566 41.3438 45.9844C41.3438 45.1122 42.0537 44.4023 42.9258 44.4023Z" fill="black"/>
                 </svg>
-                <span>1</span>
+                {cart.length !== 0 ? <span>{cart.length}</span>: null}
             </button>
         </nav>
     )

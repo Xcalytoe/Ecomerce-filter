@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Details from '../components/Details'
-import Filter from '../components/Products'
+import Products from '../components/Products'
 import Navbar from '../components/Navbar'
 import styles from '../styles/Home.module.css'
 
@@ -20,7 +20,7 @@ export default function Home() {
 
         </header>
         <Details/>
-        <Filter/>
+        <Products/>
       </main>
 
     

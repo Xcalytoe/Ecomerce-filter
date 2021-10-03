@@ -9,7 +9,8 @@ import { FILTER_LOADING, FILTER_SUCCESS } from '../components/context/actionsTyp
 export default function SidebarFilter() {
     const [filters, setFilters] = useState([])
     const {productState,  productDispatch} = useContext(GlobalContext);
-
+    const { products, prevProducts } = productState;
+    console.log(prevProducts)
         // handle onChange 
     const onChange = (e) =>{
         if (e.target.checked) {
@@ -23,7 +24,7 @@ export default function SidebarFilter() {
             productDispatch({
                 type:FILTER_SUCCESS,
                 loading: false,
-                payload: data.products
+                payload: prevProducts
             })
         }else{
             // set loader to true 
@@ -31,8 +32,8 @@ export default function SidebarFilter() {
                 type:FILTER_LOADING,
                 loading: true,
               })
-            
-            let myProduct = data.products.filter((item) => {
+            // filter from prevProducts 
+            let myProduct = prevProducts.filter((item) => {
                     
                 return  filters.some(name => {
                     if (name === "lower") {
