@@ -29,7 +29,16 @@ export default function Filter() {
            <div className="products-grid__image">
                     {/* best seller tag */}
                 {val.bestseller ? <span> Best Seller</span> : null}
-                <Image  src={val.image.src} width={282} height={398} placeholder="blur" layout="responsive" blurDataURL={val.image.src} alt={val.image.alt}/>
+                <Image  
+                    src={val.image.src} 
+                    width={282} 
+                    height={398} 
+                    placeholder="blur" 
+                    layout="responsive" 
+                    blurDataURL={val.image.src} 
+                    alt={val.image.alt}
+                    className="object-cover"
+                />
                 <button onClick={()=> handleAddToCart(val)} className="products-grid__button">Add to Cart</button>
            </div>
            <p className="products-grid__category">{val.category}</p>

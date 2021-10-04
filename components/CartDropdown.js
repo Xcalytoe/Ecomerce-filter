@@ -17,7 +17,15 @@ export default function CartDropdown() {
                                 <p className="cart-dropdown__price">${item.price}</p>
                             </div>
                             <div>
-                                <Image width={149} height={86} src={item.image.src} placeholder="blur" blurDataURL={item.image.src} alt={item.image.alt}/>
+                                <Image 
+                                    width={149} 
+                                    height={86} 
+                                    src={item.image.src} 
+                                    placeholder="blur" 
+                                    blurDataURL={item.image.src} 
+                                    alt={item.image.alt}
+                                    className="object-cover"
+                                />
                             </div>
                         </a>
                     </Link>
