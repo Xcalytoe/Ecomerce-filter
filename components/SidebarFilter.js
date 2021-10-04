@@ -6,7 +6,7 @@ import {GlobalContext} from '../components/context/Provider';
 import { FILTER_LOADING, FILTER_SUCCESS, FILTER_SUCCESS_PREV } from '../components/context/actionsType/actiontypes';
 
 
-export default function SidebarFilter() {
+export default function SidebarFilter({openFilter, toggleFilter}) {
     const [filters, setFilters] = useState([])
     const {productState,  productDispatch} = useContext(GlobalContext);
     const { products, prevProducts } = productState;
@@ -18,6 +18,14 @@ export default function SidebarFilter() {
             setFilters(filters.filter(id => id !== e.target.value));
           }
     }
+    useEffect(() => {
+        if (!openFilter) {
+            // add background
+            document.body.classList.add("bg-before");
+        }else{
+            document.body.classList.remove("bg-before");
+        }
+      }, [openFilter]);
     useEffect(() => {
         if (filters.length === 0){
             productDispatch({
@@ -89,7 +97,16 @@ export default function SidebarFilter() {
                 </label>
     });
     return (
-        <aside>
+        <aside className={openFilter ? "filter__open": ""}>
+            <div className="filter__mobile-header justify-between items-center">
+                <h4>Filter</h4>
+                <button onClick={() => toggleFilter()}>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2L20 20" stroke="black" stroke-width="4"/>
+                        <path d="M2 20L20 2" stroke="black" stroke-width="4"/>
+                    </svg>
+                </button>
+            </div>
             <div className="filter__sidebar">
                 <div>
                     <h4>Category</h4>
@@ -100,6 +117,10 @@ export default function SidebarFilter() {
                     <h4>Price range</h4>
                     {priceLabel}
                 </div>
+            </div>
+            <div className="filter__buttons flex justify-around">
+                <button>CLEAR</button>
+                <button>SAVE</button>
             </div>
         </aside>
     )

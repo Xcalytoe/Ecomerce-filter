@@ -10,6 +10,7 @@ import Pagination from './Pagination';
 
 
 export default function Filter() {
+    const [ openFilter, setOpenFilter ] = useState(true)
     const {productState, cartState,  cartDispatch} = useContext(GlobalContext);
     const {loading , products} = productState;
     const { cart } = cartState;
@@ -23,13 +24,12 @@ export default function Filter() {
     }
 
     const allProducts = products?.slice(0,6).map((val, index) => {
-    //    console.log(val)
        return ((!val.featured) ? 
        <div className="products-grid__item" key={`item${index}`}>
            <div className="products-grid__image">
                     {/* best seller tag */}
                 {val.bestseller ? <span> Best Seller</span> : null}
-                <Image  src={val.image.src} width={282} height={398} placeholder="blur" blurDataURL={val.image.src} alt={val.image.alt}/>
+                <Image  src={val.image.src} width={282} height={398} placeholder="blur" layout="responsive" blurDataURL={val.image.src} alt={val.image.alt}/>
                 <button onClick={()=> handleAddToCart(val)} className="products-grid__button">Add to Cart</button>
            </div>
            <p className="products-grid__category">{val.category}</p>
@@ -39,6 +39,11 @@ export default function Filter() {
         null
        )
     });
+    // mobile filter activator 
+    const toggleFilter = () => {
+        setOpenFilter(!openFilter);
+        console.log("dghjkhg")
+    }
     return (
         <div className="filter">
            <div className="filter__header flex justify-between items-center">
@@ -52,11 +57,11 @@ export default function Filter() {
                     <span>Premium Photos</span>
                 </div>
                 {/* sorting component  */}
-                <Sort/>
+                <Sort toggleFilter={toggleFilter}/>
 
            </div>
            <div className="filter__grid grid">
-               <SidebarFilter/>
+               <SidebarFilter toggleFilter={toggleFilter} openFilter={openFilter}/>
                <main>
                     {loading ? <Skeleton/> : <div className="products-grid grid">{allProducts}</div>}
                     <Pagination/>

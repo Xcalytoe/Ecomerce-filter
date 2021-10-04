@@ -39,9 +39,10 @@ export default function Details() {
             </div>
             <div>
                 <div className="details__image">
-                    <Image src={featured.image.src} width={1290} height={553} blurDataURL={featured.image.src} placeholder="blur" layout="responsive" alt={featured.image.alt}/>
+                    <Image src={featured.image.src} width={1290} height={553} blurDataURL={featured.image.src} placeholder="blur" layout="intrinsic" alt={featured.image.alt}/>
                     <span>Photo of the day</span>
                 </div>
+                <input className="details__mobile-btn" type="button" value="ADD TO CART" onClick={ ()=> handleAddToCart(featured)}/>
                 <div className="details__description-container flex justify-between flex-wrap">
                     <div className="details__description">
                         <h5>About {featured.name}</h5>
