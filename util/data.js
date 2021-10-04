@@ -76,26 +76,26 @@ export const data = {
 
 
      {
-        "name":"Red Bench",
-        "category":"people",
-        "price":3.89,
+        "name":"Forest",
+        "category":"nature",
+        "price":355.89,
         "currency":"USD",
         "image":{
-           "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-           "alt":"People"
+           "src":"https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+           "alt":"Forest"
         },
         "bestseller":false,
         "featured":false,
         "details":null
      },
      {
-      "name":"Red Bench",
-      "category":"people",
-      "price":3.89,
+      "name":"Snow Mountain",
+      "category":"nature",
+      "price":34.89,
       "currency":"USD",
       "image":{
-         "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-         "alt":"People"
+         "src":"https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+         "alt":"snow mountain"
       },
       "bestseller":true,
       "featured":false,
@@ -103,7 +103,7 @@ export const data = {
    },   {
     "name":"Red Bench",
     "category":"people",
-    "price":3.89,
+    "price":366.89,
     "currency":"USD",
     "image":{
        "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -116,7 +116,7 @@ export const data = {
  {
   "name":"Red Bench",
   "category":"people",
-  "price":3.89,
+  "price":13.89,
   "currency":"USD",
   "image":{
      "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -128,7 +128,7 @@ export const data = {
 },   {
     "name":"Red Bench",
     "category":"people",
-    "price":3.89,
+    "price":43.89,
     "currency":"USD",
     "image":{
        "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -141,7 +141,7 @@ export const data = {
  {
   "name":"Red Bench",
   "category":"people",
-  "price":3.89,
+  "price":93.89,
   "currency":"USD",
   "image":{
      "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -153,7 +153,7 @@ export const data = {
 },   {
     "name":"Red Bench",
     "category":"people",
-    "price":3.89,
+    "price":83.89,
     "currency":"USD",
     "image":{
        "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -166,7 +166,7 @@ export const data = {
  {
   "name":"Red Bench",
   "category":"people",
-  "price":3.89,
+  "price":113.89,
   "currency":"USD",
   "image":{
      "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -178,7 +178,7 @@ export const data = {
 },   {
     "name":"Red Bench",
     "category":"people",
-    "price":3.89,
+    "price":223.89,
     "currency":"USD",
     "image":{
        "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -189,50 +189,50 @@ export const data = {
     "details":null
  },
  {
-  "name":"Red Bench",
-  "category":"people",
-  "price":3.89,
+  "name":"Burst city",
+  "category":"city",
+  "price":343.89,
   "currency":"USD",
   "image":{
-     "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-     "alt":"People"
+     "src":"https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+     "alt":"city"
   },
   "bestseller":false,
   "featured":false,
   "details":null
 },   {
-    "name":"Red Bench",
-    "category":"people",
+    "name":"Back Bench",
+    "category":"city",
     "price":14.65,
     "currency":"USD",
     "image":{
-       "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-       "alt":"People"
+       "src":"https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+       "alt":"city"
     },
     "bestseller":false,
     "featured":false,
     "details":null
  },
  {
-  "name":"Red Bench",
-  "category":"people",
+  "name":"G wagon",
+  "category":"premium",
   "price":60.89,
   "currency":"USD",
   "image":{
-     "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-     "alt":"People"
+     "src":"https://images.pexels.com/photos/5331987/pexels-photo-5331987.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+     "alt":"Car"
   },
   "bestseller":false,
   "featured":false,
   "details":null
 },   {
-    "name":"Red Bench",
-    "category":"people",
+    "name":"Dog",
+    "category":"pets",
     "price":50.89,
     "currency":"USD",
     "image":{
-       "src":"https://images.pexels.com/photos/7353019/pexels-photo-7353019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-       "alt":"People"
+       "src":"https://images.pexels.com/photos/374825/pexels-photo-374825.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+       "alt":"Dog"
     },
     "bestseller":false,
     "featured":false,

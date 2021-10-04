@@ -102,8 +102,8 @@ export default function SidebarFilter({openFilter, toggleFilter}) {
                 <h4>Filter</h4>
                 <button onClick={() => toggleFilter()}>
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 2L20 20" stroke="black" stroke-width="4"/>
-                        <path d="M2 20L20 2" stroke="black" stroke-width="4"/>
+                        <path d="M2 2L20 20" stroke="black" strokeWidth="4"/>
+                        <path d="M2 20L20 2" stroke="black" strokeWidth="4"/>
                     </svg>
                 </button>
             </div>
@@ -118,7 +118,7 @@ export default function SidebarFilter({openFilter, toggleFilter}) {
                     {priceLabel}
                 </div>
             </div>
-            <div className="filter__buttons flex justify-around">
+            <div className="filter__buttons justify-around">
                 <button>CLEAR</button>
                 <button>SAVE</button>
             </div>

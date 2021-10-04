@@ -376,6 +376,7 @@ html {
     margin-bottom: 100px;
     min-height: 600px;
     &__item{
+        max-width: 400px;
         img{
             object-fit: cover;
         }
@@ -643,7 +644,7 @@ html {
         }
     }
 }
-.filter__mobile-header{display: none;}
+.filter__mobile-header, .filter__buttons, .details__mobile-btn{display: none;}
 @media only screen and (max-width:767px){
     body{
         &.bg-before{
@@ -664,25 +665,26 @@ html {
 
     .details{
         &__mobile-btn{
-                margin-top: 8px;
-                cursor: pointer;
-                font-style: normal;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 25px;
-                letter-spacing: 0.07em;
-                color: #FFFFFF;
-                background: #000000;
-                padding: 7px 39px;
-                margin: 20px 0;
+            display: block;
+            margin-top: 8px;
+            cursor: pointer;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 25px;
+            letter-spacing: 0.07em;
+            color: #FFFFFF;
+            background: #000000;
+            padding: 7px 39px;
+            margin: 20px 0;
+            @include border(1px solid #000000);
+            @include transition(all 0.3s);
+            &:hover{
                 @include border(1px solid #000000);
                 @include transition(all 0.3s);
-                &:hover{
-                    @include border(1px solid #000000);
-                    @include transition(all 0.3s);
-                    color: #000000;
-                    background: #FFFFFF;
-                }
+                color: #000000;
+                background: #FFFFFF;
+            }
         }
         &__description-container {
             margin-top: 10px;
@@ -751,6 +753,8 @@ html {
             }
         }
         &__buttons{
+            display: -webkit-flex;
+            display: flex;
             position: -webkit-sticky;
             position: sticky;
             bottom: 0;
