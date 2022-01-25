@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react'
 import Link from 'next/link'
-import {GlobalContext} from './context/Provider';
-import { CART_ACTIVE } from './context/actionsType/actiontypes';
+import {GlobalContext} from '../helper/context/Provider';
+import { CART_ACTIVE } from '../helper/context/actionsType/actiontypes';
 
 export default function Navbar() {
     const {cartState,  cartDispatch} = useContext(GlobalContext);

@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react'
-import {GlobalContext} from './context/Provider';
+import {GlobalContext} from '../helper/context/Provider';
 import { orderBy, compact } from 'lodash';
-import { FILTER_SUCCESS } from './context/actionsType/actiontypes';
+import { FILTER_SUCCESS } from '../helper/context/actionsType/actiontypes';
 
 export default function Sort({toggleFilter}) {
     const {productState,  productDispatch} = useContext(GlobalContext);
@@ -29,6 +29,7 @@ export default function Sort({toggleFilter}) {
         let newOrder = sortOrder ? "asc" : "desc" // sorting order 
         sortProducts(sortOption, newOrder);//  sort function
       }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [sortOption, sortOrder]);
     return (
         <div className="flex items-center filter__select">

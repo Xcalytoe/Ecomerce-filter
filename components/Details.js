@@ -3,8 +3,8 @@ import Image from 'next/image'
 import featuredImg from '../public/images/img.jpg'
 import Link from 'next/link'
 import {data} from '../util/data'
-import {GlobalContext} from './context/Provider';
-import { CART_SUCCESS } from './context/actionsType/actiontypes';
+import {GlobalContext} from '../helper/context/Provider';
+import { CART_SUCCESS } from '../helper/context/actionsType/actiontypes';
 
 
 export default function Details() {
@@ -17,7 +17,7 @@ export default function Details() {
             return item.featured
         })
         setFeatured(product[0])
-    }, );
+    }, []);
 
     const handleAddToCart = (product) => {
         let products = [...cart, product];

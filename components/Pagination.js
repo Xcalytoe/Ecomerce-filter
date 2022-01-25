@@ -1,8 +1,8 @@
 import { useState, useEffect, useContext } from 'react'
 import ReactPaginate from 'react-paginate';
 import {data} from '../util/data'
-import { FILTER_SUCCESS, FILTER_SUCCESS_PREV } from '../components/context/actionsType/actiontypes';
-import {GlobalContext} from '../components/context/Provider';
+import { FILTER_SUCCESS, FILTER_SUCCESS_PREV } from '../helper/context/actionsType/actiontypes';
+import {GlobalContext} from '../helper/context/Provider';
 
 
 export default function Pagination() {
@@ -25,6 +25,7 @@ export default function Pagination() {
     }
     useEffect(() => {
         displayProducts(pagesVisited, pagesVisited + productPerPage)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pageNumber, prevProducts]);
     
     useEffect(() => { //reset page no to zero after filter

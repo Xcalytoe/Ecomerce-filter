@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import {GlobalContext} from './context/Provider';
-import { CART_CLEAR, CART_INACTIVE } from './context/actionsType/actiontypes';
+import {GlobalContext} from '../helper/context/Provider';
+import { CART_CLEAR, CART_INACTIVE } from '../helper/context/actionsType/actiontypes';
 
 
 export default function CartDropdown() {

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import {GlobalContext} from './context/Provider';
+import {GlobalContext} from '../helper/context/Provider';
 import SidebarFilter from './SidebarFilter';
 import Skeleton from './Skeleton';
 import Sort from './Sort';
-import { CART_SUCCESS } from './context/actionsType/actiontypes';
+import { CART_SUCCESS } from '../helper/context/actionsType/actiontypes';
 import Pagination from './Pagination';
 
 

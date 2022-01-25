@@ -2,8 +2,8 @@ import React, { useState, useEffect, useContext } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import {data} from '../util/data'
-import {GlobalContext} from '../components/context/Provider';
-import { FILTER_LOADING, FILTER_SUCCESS, FILTER_SUCCESS_PREV } from '../components/context/actionsType/actiontypes';
+import {GlobalContext} from '../helper/context/Provider';
+import { FILTER_LOADING, FILTER_SUCCESS, FILTER_SUCCESS_PREV } from '../helper/context/actionsType/actiontypes';
 
 
 export default function SidebarFilter({openFilter, toggleFilter}) {
@@ -72,6 +72,7 @@ export default function SidebarFilter({openFilter, toggleFilter}) {
                 }), 2000)
           
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [filters]);
 // filter category 
     const category = [{name: "People"}, {name: "Premium"}, {name: "Pets"}, {name: "Food"}, {name: "Landmarks"}, {name: "Cities"}, {name: "Nature"}];

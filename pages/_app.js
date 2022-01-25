@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import "../styles/sass/bejamas.scss";
 import "../styles/tailwind_animation.css";
-import { GlobalProvider } from '../components/context/Provider';
+import { GlobalProvider } from '../helper/context/Provider';
 
 
 function MyApp({ Component, pageProps }) {
