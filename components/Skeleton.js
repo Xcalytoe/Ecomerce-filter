@@ -3,6 +3,7 @@ import React from "react";
 export default function Skeleton() {
   return (
     <section className="skeleton flex">
+      {/* loop? */}
       <div className="skeleton__card-item">
         <div className="skeleton__card-loader"></div>
         <div className="skeleton__text-2"></div>

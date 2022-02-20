@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { GlobalContext } from "../helper/context/Provider";
 import { orderBy, compact } from "lodash";
+// import orderBy from "lodash/orderBy"; // You will reduce import cost a lot
 import { FILTER_SUCCESS } from "../helper/context/actionsType/actiontypes";
 
 export default function Sort({ toggleFilter }) {
@@ -10,6 +11,7 @@ export default function Sort({ toggleFilter }) {
   const [sortOrder, setSortOrder] = useState(true);
 
   const sortProducts = (option, order) => {
+    // This .map does nothing
     let sorted = orderBy(products, option, order).map((item) => {
       return item;
     });

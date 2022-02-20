@@ -12,7 +12,7 @@ export default function Pagination() {
   const { products, prevProducts } = productState;
 
   const [pageNumber, setPageNumber] = useState(0);
-  const productPerPage = 6;
+  const productPerPage = 6; // Should be moved to a constant file
   const pagesVisited = pageNumber * productPerPage;
   const pageCount = Math.ceil(prevProducts.length / productPerPage);
   const displayProducts = (num1, num2) => {
@@ -36,7 +36,8 @@ export default function Pagination() {
     setPageNumber(selected);
   };
   return (
-    <div className="">
+    // Remove the classname if there isn't a class
+    <div className=""> 
       <ReactPaginate
         previousLabel={
           <svg

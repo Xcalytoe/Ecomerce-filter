@@ -11,13 +11,14 @@ export default function Navbar() {
     return cartDispatch({
       // change state to true
       type: CART_ACTIVE,
-      cartLoad: true,
+      cartLoad: true, //boolean variables should be questions , isCartLoaded
     });
   };
   return (
     <nav className="flex justify-between items-center">
       <Link href="/">
         <a>
+          {/* Extract svg to an svg file and import it here */}
           <svg
             width="159"
             height="26"
