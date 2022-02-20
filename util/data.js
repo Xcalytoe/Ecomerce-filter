@@ -1,3 +1,4 @@
+// This file will be better of as json
 export const data = {
     "products":[
      {

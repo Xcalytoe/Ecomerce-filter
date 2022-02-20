@@ -7,3 +7,13 @@ export const CART_SUCCESS = "CART_SUCCESS";
 export const CART_ACTIVE = "CART_ACTIVE";
 export const CART_INACTIVE = "CART_INACTIVE";
 export const CART_CLEAR = "CART_CLEAR";
+
+// You can group this
+// FILTER = {
+//     loading: 'loading',
+//     success: 'success',
+// }
+// CART = {
+//     error: 'error',
+// }
+// Then you can build automatic name spacing and will only have to import at most 2 variables

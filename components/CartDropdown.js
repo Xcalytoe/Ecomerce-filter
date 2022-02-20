@@ -12,14 +12,17 @@ export default function CartDropdown() {
   const { cart, cartLoad } = cartState;
   let cartItem = cart.map((item, index) => {
     return (
+      // There should be a unique field, using index in any form is useless
       <div key={`cartItem${index}`}>
         <Link href="/">
+          {/* Where are you having <a /> in a link */}
           <a className="flex cart-dropdown__flex items-center justify-between">
             <div>
               <p className="cart-dropdown__name">{item.name}</p>
               <p className="cart-dropdown__price">${item.price}</p>
             </div>
             <div>
+              {/* Useless diff */}
               <Image
                 width={149}
                 height={86}
@@ -36,6 +39,7 @@ export default function CartDropdown() {
       </div>
     );
   });
+  // This two dont need to be here, they should be moved to another file
   // clear cart function
   const clearCart = () => {
     return cartDispatch({

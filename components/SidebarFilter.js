@@ -16,6 +16,7 @@ export default function SidebarFilter({ openFilter, toggleFilter }) {
   // handle onChange
   const onChange = (e) => {
     if (e.target.checked) {
+      // I would rather rely on the presence of the value in the array then relying in a dom value
       setFilters([...filters, e.target.value]);
     } else {
       setFilters(filters.filter((id) => id !== e.target.value));
@@ -25,6 +26,7 @@ export default function SidebarFilter({ openFilter, toggleFilter }) {
     if (!openFilter) {
       // add background
       document.body.classList.add("bg-before");
+      // THIS IS NOT JQUERY, THIS IS REACT, Please remove this document.whatever and let the UI react to data 
     } else {
       document.body.classList.remove("bg-before");
     }
@@ -45,6 +47,23 @@ export default function SidebarFilter({ openFilter, toggleFilter }) {
       // filter from prevProducts
       let myProduct = data.products.filter((item) => {
         return filters.some((name) => {
+          // I am pretty sure there is a better way for this
+          // For started you dont need the co-joined `20-100` name
+          // You also dont need the >= checks the returns
+          // THis should be looking like this
+          // const featureColor = (featuere: number) => {
+          //   if (featuere >= 4) {
+          //     return '#B5E55D';
+          //   }
+          //   if (featuere >= 3) {
+          //     return '#7DCAE8';
+          //   }
+          //   if (featuere >= 2) {
+          //     return '#F3AC14';
+          //   }
+          //   return '#ED7155';
+          // };
+          
           if (name === "lower") {
             return [item.price].flat() < 20;
           } else if (name === "20-100") {
@@ -72,6 +91,7 @@ export default function SidebarFilter({ openFilter, toggleFilter }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);
   // filter category
+  // const categories
   const category = [
     { name: "People" },
     { name: "Premium" },
@@ -83,7 +103,7 @@ export default function SidebarFilter({ openFilter, toggleFilter }) {
   ];
   const categoryLabel = category.map((val, index) => {
     return (
-      <label key={`category${index}`} className="flex items-center">
+      <label key={`category${val.name}`} className="flex items-center">
         <input
           type="checkbox"
           name={`option${index}`}
@@ -102,6 +122,7 @@ export default function SidebarFilter({ openFilter, toggleFilter }) {
     { name: "$100 - $200", val: "100-200" },
     { name: "More than $200", val: "more" },
   ];
+  // Components not variables
   const priceLabel = price.map((val, index) => {
     return (
       <label key={`price${index}`} className="flex items-center">

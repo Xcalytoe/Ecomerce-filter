@@ -2,40 +2,45 @@ import React, { useState, useEffect, useContext } from "react";
 import Image from "next/image";
 import featuredImg from "../public/images/img.jpg";
 import Link from "next/link";
-import { data } from "../util/data";
+import { data } from "../util/data"; // Name variables very well, What the heck is data
 import { GlobalContext } from "../helper/context/Provider";
 import { CART_SUCCESS } from "../helper/context/actionsType/actiontypes";
 
 export default function Details() {
   const { cartState, cartDispatch } = useContext(GlobalContext);
   const { cart } = cartState;
-  const [featured, setFeatured] = useState({});
+  const [featured, setFeatured] = useState({}); // Featured what?
 
   useEffect(() => {
+    // const when you are not reassinging
     let product = data.products.filter((item) => {
       return item.featured;
     });
+    // You can use .find here since all you want is the first one and the loop will break when it gets the first
     setFeatured(product[0]);
   }, []);
 
   const handleAddToCart = (product) => {
+    // The cart variable below should be named `cartProduct`
     let products = [...cart, product];
     cartDispatch({
-      // push product to global state
+      // push product to global state // This comment is useless
       type: CART_SUCCESS,
-      loading: false,
+      loading: false, // The loading state should be inferred by the reducer, it doesn't need to live here
       payload: products,
     });
   };
 
+  // Weird, An actualy loading state should be used here
   if (Object.keys(featured).length == 0) {
     return <div className="py-4">Loading...</div>;
-  } else
+  } else // Else is not doing anything
     return (
       <section className="details">
         <div className="details__header flex justify-between items-center flex-wrap">
           <h4>{featured.name}</h4>
-          <input
+          <input 
+          // Why not a button tag
             type="button"
             value="ADD TO CART"
             onClick={() => handleAddToCart(featured)}
@@ -69,6 +74,7 @@ export default function Details() {
             <div className="details__related grid justify-end">
               <h5>People also buy</h5>
               <div className="flex details__product">
+                {/* Shouldn't this be a loop */}
                 <Link href="/">
                   <a>
                     <Image
